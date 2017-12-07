@@ -4,12 +4,14 @@
  *			um tratador
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	02/12/2017
- * @date 	02/12/2017
+ * @date 	07/12/2017
  */	
 
 
 #include "tratador.h"
 
+#include <string>
+using std::string;
 
 namespace PetFera {
 
