@@ -125,7 +125,7 @@ namespace PetFera {
 		private:
 
 			/** @brief Metodo virtual puro para imprimir os dados de um animal */
-			virtual std::ostream& print(std::ostream&) = 0;
+			virtual std::ostream& print(std::ostream&);
 
 	};
 }

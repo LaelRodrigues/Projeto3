@@ -31,11 +31,16 @@ namespace PetFera {
 			Tratador();
 
 			/** @brief Construtor parametrizado */	
-			Tratador(int _id, string _nome, string _cpf, int _idade,
+			Tratador(int _id, string _nome, string _funcao, string _cpf, int _idade,
 			string _tipo_sanguineo, char _fatorRH, string _especialidade);
 
 			/** @brief Destrutor padrao */
 			~Tratador();
+
+		private:
+			
+			/** @brief Metodo para imprimir os dados de um tratador */
+			std::ostream& print(std::ostream &o) const;
 	};
 }
 

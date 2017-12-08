@@ -4,7 +4,7 @@
  *			um animal silvestre
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	03/12/2017
- * @date 	03/12/2017
+ * @date 	07/12/2017
  */	
 
 #ifndef SILVESTRE_H
@@ -21,12 +21,12 @@ namespace PetFera {
 	/**
  	 * @class 	Silvestre silvestre.h
   	 * @brief	Classe que representa um animal Silvestre
-  	 * @details Atributo de um animal silvestre é o ibama
+  	 * @details Atributo de um animal silveste: ibama
  	 */
 	class Silvestre {
 
 		protected:
-			string ibama;			/**< Ibama */
+			string ibama;			/**< identificador do Ibama */
 
 		public:
 			/** @brief Construtor padrao */
@@ -38,10 +38,10 @@ namespace PetFera {
 			/** @brief Destrutor padrao */
 			~Silvestre();
 
-			/** @brief Retorna o ibama */
+			/** @brief Retorna o identificador do ibama */
 			string getIbama();
 
-			/** @brief Modifica o ibama*/
+			/** @brief Modifica o identificador do ibama*/
 			void setIbama(string _ibama);
 
 	};

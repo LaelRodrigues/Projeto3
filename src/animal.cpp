@@ -13,6 +13,8 @@
 #include <string>
 using std::string;
 
+#include <iostream>
+using std::endl;
 
 namespace PetFera {
 
@@ -156,6 +158,12 @@ namespace PetFera {
  	 */
 	std::ostream& operator<< (std::ostream &o, Animal &a) {
 		return a.print(o);
+	}
+
+	std::ostream& 
+	Animal::print(std::ostream &o) {
+		o << "Identificador: " << id << endl;
+		return o;
 	}
 
 	/** 

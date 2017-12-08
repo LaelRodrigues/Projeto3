@@ -13,7 +13,8 @@
 #include <string>
 using std::string;
 
-#include <iomanip>
+#include <iostream>
+using std::endl;
 
 
 namespace PetFera {
@@ -73,18 +74,18 @@ namespace PetFera {
 	 */
 	std::ostream& 
 	Anfibio::print(std::ostream &o) {
-		o << std::setfill (' ') << std::setw (10) << id << " | " 
-			<< std::setfill (' ') << std::setw (10) << classe << " | " 
-			<< std::setfill (' ') << std::setw (13) << nome << " | "
-			<< std::setfill (' ') << std::setw (13) << cientifico << " | " 
-			<< std::setfill (' ') << std::setw (3) << sexo << " | "
-			<< std::setfill (' ') << std::setw (4) << tamanho << " | "
-			<< std::setfill (' ') << std::setw (10) << dieta << " | "
-			<< std::setfill (' ') << std::setw (6) << veterinario.getId() << " | "
-			<< std::setfill (' ') << std::setw (6) << tratador.getId() << " | "
-			<< std::setfill (' ') << std::setw (10) << batismo << " | "
-			<< std::setfill (' ') << std::setw (3) << total_mudas << " | "
-			<< std::setfill (' ') << std::setw (10) << ultima_muda; 
+		o << "Identificador: " << id << endl;
+		o << "Classe: " << classe << endl; 
+		o << "Nome: " << nome << endl;
+		o << "Nome cientifico: " << cientifico << endl;
+		o << "Sexo: " << sexo << endl;
+		o << "Tamanho: " << tamanho << endl;
+		o << "Dieta: " << dieta << endl;
+		o << "Identificador do veterinario(o valor 0 indica que não existe): " << veterinario.getId() << endl;
+		o << "Identificador do tratador(o valor 0 indica que não existe): " << tratador.getId() << endl;
+		o << "Nome de batismo: " << batismo << endl;
+		o << "Total mudas: " << total_mudas << endl;
+		o << "Ultima muda: " << ultima_muda << endl; 
 		return o;
 	}
 
@@ -125,21 +126,21 @@ namespace PetFera {
 	 */
 	std::ostream& 
 	AnfibioNativo::print(std::ostream &o) {
-		o << std::setfill (' ') << std::setw (10) << id << " | " 
-			<< std::setfill (' ') << std::setw (10) << classe << " | " 
-			<< std::setfill (' ') << std::setw (13) << nome << " | "
-			<< std::setfill (' ') << std::setw (13) << cientifico << " | " 
-			<< std::setfill (' ') << std::setw (3) << sexo << " | "
-			<< std::setfill (' ') << std::setw (4) << tamanho << " | "
-			<< std::setfill (' ') << std::setw (10) << dieta << " | "
-			<< std::setfill (' ') << std::setw (6) << veterinario.getId() << " | "
-			<< std::setfill (' ') << std::setw (6) << tratador.getId() << " | "
-			<< std::setfill (' ') << std::setw (10) << batismo << " | "
-			<< std::setfill (' ') << std::setw (3) << total_mudas << " | "
-			<< std::setfill (' ') << std::setw (10) << ultima_muda << " | "
-			<< std::setfill (' ') << std::setw (8) << ibama << " | "
-			<< std::setfill (' ') << std::setw (4) << uf_origem << " | "
-			<< std::setfill (' ') << std::setw (8) << autorizacao; 
+		o << "Identificador: " << id << endl;
+		o << "Classe: " << classe << endl; 
+		o << "Nome: " << nome << endl;
+		o << "Nome cientifico: " << cientifico << endl;
+		o << "Sexo: " << sexo << endl;
+		o << "Tamanho: " << tamanho << endl;
+		o << "Dieta: " << dieta << endl;
+		o << "Identificador do veterinario(o valor 0 indica que não existe): " << veterinario.getId() << endl;
+		o << "Identificador do tratador(o valor 0 indica que não existe): " << tratador.getId() << endl;
+		o << "Nome de batismo: " << batismo << endl;
+		o << "Total mudas: " << total_mudas << endl;
+		o << "Ultima muda: " << ultima_muda << endl; 
+		o << "Identificador do ibama: " << ibama << endl;
+		o << "Uf de origem: " << uf_origem << endl;
+		o << "Autorizacao: " << autorizacao << endl; 
 		return o;
 	}
 
@@ -174,20 +175,20 @@ namespace PetFera {
 
 	std::ostream& 
 	AnfibioExotico::print(std::ostream &o) {
-		o << std::setfill (' ') << std::setw (10) << id << " | " 
-			<< std::setfill (' ') << std::setw (10) << classe << " | " 
-			<< std::setfill (' ') << std::setw (13) << nome << " | "
-			<< std::setfill (' ') << std::setw (13) << cientifico << " | " 
-			<< std::setfill (' ') << std::setw (3) << sexo << " | "
-			<< std::setfill (' ') << std::setw (4) << tamanho << " | "
-			<< std::setfill (' ') << std::setw (10) << dieta << " | "
-			<< std::setfill (' ') << std::setw (6) << veterinario.getId() << " | "
-			<< std::setfill (' ') << std::setw (6) << tratador.getId() << " | "
-			<< std::setfill (' ') << std::setw (10) << batismo << " | "
-			<< std::setfill (' ') << std::setw (3) << total_mudas << " | "
-			<< std::setfill (' ') << std::setw (10) << ultima_muda << " | "
-			<< std::setfill (' ') << std::setw (8) << ibama << " | "
-			<< std::setfill (' ') << std::setw (10) << pais_origem; 
+		o << "Identificador: " << id << endl;
+		o << "Classe: " << classe << endl; 
+		o << "Nome: " << nome << endl;
+		o << "Nome cientifico: " << cientifico << endl;
+		o << "Sexo: " << sexo << endl;
+		o << "Tamanho: " << tamanho << endl;
+		o << "Dieta: " << dieta << endl;
+		o << "Identificador do veterinario(o valor 0 indica que não existe): " << veterinario.getId() << endl;
+		o << "Identificador do tratador(o valor 0 indica que não existe): " << tratador.getId() << endl;
+		o << "Nome de batismo: " << batismo << endl;
+		o << "Total mudas: " << total_mudas << endl;
+		o << "Ultima muda: " << ultima_muda << endl; 
+		o << "Identificador do ibama: " << ibama << endl;
+		o << "Pais de origem: " << pais_origem << endl; 
 		return o;
 	}
 }

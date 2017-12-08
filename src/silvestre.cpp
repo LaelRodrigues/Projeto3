@@ -4,7 +4,7 @@
  *			um animal silvestre
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	03/12/2017
- * @date 	03/12/2017
+ * @date 	07/12/2017
  */	
 
 
@@ -19,7 +19,7 @@ namespace PetFera {
 	Silvestre::Silvestre() {}
 
 	/**
-	 * @param _ibama Ibama
+	 * @param _ibama Identificador do ibama
 	 */
 	Silvestre::Silvestre(string _ibama) {
 		setIbama(_ibama);
@@ -28,12 +28,12 @@ namespace PetFera {
 	// Destrutor padrao
 	Silvestre::~Silvestre() {}
 
-	/** @return Ibama */
+	/** @return Identificador do ibama*/
 	string Silvestre::getIbama() {
 		return ibama;
 	}
 
-	/** @param _ibama Ibama */
+	/** @param _ibama Identificador do ibama */
 	void Silvestre::setIbama(string _ibama) {
 		ibama = _ibama;
 	}

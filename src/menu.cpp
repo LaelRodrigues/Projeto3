@@ -1,5 +1,5 @@
 /** 
- * @file	meu.h
+ * @file	menu.cpp
  * @brief	Implementacao da classe Menu para representar
  *			um menu do PetFera
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
@@ -510,11 +510,8 @@ namespace PetFera {
 			}
 			else if(tipo == "Domestico") {
 				if(idvet == 0 && idtrat == 0 ) { 
-					cout << "estou aqui" << endl;
 					animal = make_shared<Mamifero>(id, classe, nome, cientifico, sexo, tamanho, dieta, (*vet), (*trat), batismo, cor_pelo);
-					cout << "estou aqui" << endl;
 					lista_animais[id] = animal;
-					cout << "estou aqui" << endl;
 					cout << endl << "-----Animal cadastrado-----" << endl << endl;
 					return;
 				}
