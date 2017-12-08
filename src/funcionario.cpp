@@ -4,12 +4,14 @@
  *			um funcionario
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	03/12/2017
- * @date 	03/12/2017
+ * @date 	07/12/2017
  */	
 
 
 #include "funcionario.h"
 
+#include <string>
+using std::string;
 
 namespace PetFera {
 
@@ -19,16 +21,18 @@ namespace PetFera {
 	/**
 	 * @param _id Identificador do funcionario
 	 * @param _nome Nome do funcionario
+	 * @param _funcao Funcao do funcionario
 	 * @param _cpf Cpf do funcionario
 	 * @param _idade Idade do funcionario
 	 * @param _tipo_sanguineo Tipo sanguineo do funcionario
 	 * @param _fatorRH Fator RH do funcionario
 	 * @param _especialidade Especialidade do funcionario
 	 */
-	Funcionario::Funcionario(int _id, string _nome, string _cpf, int _idade,
-	string _tipo_sanguineo, char _fatorRH, string _especialidade) {
+	Funcionario::Funcionario(int _id, string _nome, string _funcao, string _cpf, 
+	int _idade, string _tipo_sanguineo, char _fatorRH, string _especialidade) {
 		setId(_id);
 		setNome(_nome);
+		setFuncao(_funcao);
 		setCpf(_cpf);
 		setIdade(_idade);
 		setTipo_sanguineo(_tipo_sanguineo);
@@ -47,6 +51,11 @@ namespace PetFera {
 	/** @return Nome do funcionario */
 	string Funcionario::getNome() {
 		return nome;
+	}
+
+	/** @return Funcao do funcionario */
+	string Funcionario::getFuncao() {
+		return funcao;
 	}
 
 	/** @return Cpf do funcionario */
@@ -84,6 +93,11 @@ namespace PetFera {
 		nome = _nome;
 	}
 
+	/** @param _funcao Funcao do funcionario */
+	void Funcionario::setFuncao(string _funcao) {
+		funcao = _funcao;
+	}
+
 	/** @param _cpf Cpf do funcionario */
 	void Funcionario::setCpf(string _cpf) {
 		cpf = _cpf;
@@ -107,5 +121,27 @@ namespace PetFera {
 	/** @param _especialidade Especialidade do funcionario */
 	void Funcionario::setEspecialidade(string _especialidade) {
 		especialidade = _especialidade;
+	}
+
+	/** 
+ 	 * @param o Referencia para stream de saida
+ 	 * @param p Referencia para um objeto Funcionario
+ 	 * @return Referencia para stream de saida
+ 	 */
+	std::ostream& operator<< (std::ostream &o, Funcionario const &f) {
+		return f.print(o);
+	}
+
+	/** 
+ 	 * @param p Referencia para um objeto Funcionario
+  	 * @return True ou false 
+ 	 */
+	bool Funcionario::operator==(const Funcionario &f) {
+		if(id == f.id) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 }

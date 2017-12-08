@@ -4,7 +4,7 @@
  *			um funcionario
  * @author	Lael Rodrigues(laelrodrigues7@gmail.com)
  * @since	03/12/2017
- * @date 	03/12/2017
+ * @date 	07/12/2017
  */	
 
 #ifndef FUNCIONARIO_H
@@ -24,7 +24,7 @@ namespace PetFera {
  	 * @class 	Funcionario funcionario.h
   	 * @brief	Classe que representa um Funcionario
  	 * @details Os atributos da classe funcionario sao: id, 
- 	 *			nome, cpf, idade, tipo_sanguineo, fatorRH e
+ 	 *			nome, funcao, cpf, idade, tipo_sanguineo, fatorRH e
  	 *			especialidade
  	 */
 	class Funcionario {
@@ -32,6 +32,7 @@ namespace PetFera {
 		protected:		
 			int id;					/**< Identificador do funcionario */
 			string nome;			/**< Nome do funcionario */
+			string funcao;			/**< Funcao do funcionario */
 			string cpf;				/**< Cpf do funcionario */
 			int idade;				/**< idade do funcionario */
 			string tipo_sanguineo;	/**< Tipo sanguineo do funcionario */
@@ -44,7 +45,7 @@ namespace PetFera {
 			Funcionario();
 
 			/** @brief Construtor parametrizado */	
-			Funcionario(int _id, string _nome, string _cpf, int _idade,
+			Funcionario(int _id, string _nome, string _funcao, string _cpf, int _idade,
 			string _tipo_sanguineo, char _fatorRH, string _especialidade);
 
 			/** @brief Destrutor padrao */
@@ -55,6 +56,9 @@ namespace PetFera {
 
 			/** @brief Retorna o nome do funcionario */
 			string getNome();
+
+			/** @brief Retorna a funcao do funcionario */
+			string getFuncao();
 
 			/** @brief Retorna o cpf do funcionario */
 			string getCpf();
@@ -77,6 +81,9 @@ namespace PetFera {
 			/** @brief Modifica o nome do funcionario */
 			void setNome(string _nome);
 
+			/** @brief Modifica a funcao do funcionario */
+			void setFuncao(string _funcao);
+
 			/** @brief Modifica o cpf do funcionario */
 			void setCpf(string _cpf);
 
@@ -91,6 +98,17 @@ namespace PetFera {
 
 			/** @brief Modifica a especialidade do funcionario */
 			void setEspecialidade(string _especialidade);
+
+			/** @brief Sobrecarga do operador de insercao em stream */
+			friend std::ostream& operator<< (std::ostream &o, Funcionario const &f);
+
+			/** @brief Sobrecarga do operador de comparacao */
+			bool operator==(const Funcionario &f);
+ 
+		private:
+
+			/** @brief Metodo virtual puro para imprimir os dado do funcionario */
+			virtual std::ostream& print(std::ostream&) const = 0;
 	};
 }
 
